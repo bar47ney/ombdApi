@@ -1,0 +1,21 @@
+<div class="container">
+
+  <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Название</mat-label>
+      <input [(ngModel)]="name" matInput placeholder="Введите название" value="">
+    </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Выберите тип</mat-label>
+    <mat-select [(ngModel)]="type">
+      <mat-option *ngFor="let type of types" [value]="type.value">
+        {{type.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div>
+    <button mat-button color="primary" (click)="getFilms()">Primary</button>
+  </div>
+
+</div>
